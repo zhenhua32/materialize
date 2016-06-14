@@ -37,10 +37,16 @@
           <div class="nav-wrapper"><a class="page-title">Icons</a></div>
         </div>
       </nav>
-      <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="mdi-navigation-menu"></i></a></div>
+      <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a></div>
       <ul id="nav-mobile" class="side-nav fixed">
         <li class="logo"><a id="logo-container" href="http://materializecss.com/" class="brand-logo">
             <object id="front-page-logo" type="image/svg+xml" data="res/materialize.svg">Your browser does not support SVG</object></a></li>
+        <li class="search">
+          <div class="search-wrapper card">
+            <input id="search"><i class="material-icons">search</i>
+            <div class="search-results"></div>
+          </div>
+        </li>
         <li class="bold"><a href="about.html" class="waves-effect waves-teal">About</a></li>
         <li class="bold"><a href="getting-started.html" class="waves-effect waves-teal">Getting Started</a></li>
         <li class="no-padding">
@@ -64,6 +70,7 @@
                 <ul>
                   <li><a href="badges.html">Badges</a></li>
                   <li><a href="buttons.html">Buttons</a></li>
+                  <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
                   <li><a href="cards.html">Cards</a></li>
                   <li><a href="chips.html">Chips</a></li>
                   <li><a href="collections.html">Collections</a></li>
@@ -266,7 +273,6 @@
           <div class="icon-preview col s6 m3"><i class="material-icons dp48">swap_vert</i><span>swap_vert</span></div>
           <div class="icon-preview col s6 m3"><i class="material-icons dp48">swap_vertical_circle</i><span>swap_vertical_circle</span></div>
           <div class="icon-preview col s6 m3"><i class="material-icons dp48">system_update_alt</i><span>system_update_alt</span></div>
-          <div class="icon-preview col s6 m3"><i class="material-icons dp48">subtitles</i><span>subtitles</span></div>
           <div class="icon-preview col s6 m3"><i class="material-icons dp48">present_to_all</i><span>present_to_all</span></div>
           <div class="icon-preview col s6 m3"><i class="material-icons dp48">portable_wifi_off</i><span>portable_wifi_off</span></div>
           <div class="icon-preview col s6 m3"><i class="material-icons dp48">phonelink_setup</i><span>phonelink_setup</span></div>
@@ -312,13 +318,6 @@
           <div class="icon-preview col s6 m3"><i class="material-icons dp48">call_end</i><span>call_end</span></div>
           <div class="icon-preview col s6 m3"><i class="material-icons dp48">call</i><span>call</span></div>
           <div class="icon-preview col s6 m3"><i class="material-icons dp48">business</i><span>business</span></div>
-          <div class="icon-preview col s6 m3"><i class="material-icons dp48">stop</i><span>stop</span></div>
-          <div class="icon-preview col s6 m3"><i class="material-icons dp48">sort_by_alpha</i><span>sort_by_alpha</span></div>
-          <div class="icon-preview col s6 m3"><i class="material-icons dp48">snooze</i><span>snooze</span></div>
-          <div class="icon-preview col s6 m3"><i class="material-icons dp48">comment</i><span>comment</span></div>
-          <div class="icon-preview col s6 m3"><i class="material-icons dp48">clear_all</i><span>clear_all</span></div>
-          <div class="icon-preview col s6 m3"><i class="material-icons dp48">chat_bubble_outline</i><span>chat_bubble_outline</span></div>
-          <div class="icon-preview col s6 m3"><i class="material-icons dp48">chat_bubble</i><span>chat_bubble</span></div>
           <div class="icon-preview col s6 m3"><i class="material-icons dp48">alarm_off</i><span>alarm_off</span></div>
           <div class="icon-preview col s6 m3"><i class="material-icons dp48">message</i><span>message</span></div>
           <div class="icon-preview col s6 m3"><i class="material-icons dp48">location_on</i><span>location_on</span></div>
@@ -381,7 +380,6 @@
           <div class="icon-preview col s6 m3"><i class="material-icons dp48">library_books</i><span>library_books</span></div>
           <div class="icon-preview col s6 m3"><i class="material-icons dp48">library_add</i><span>library_add</span></div>
           <div class="icon-preview col s6 m3"><i class="material-icons dp48">high_quality</i><span>high_quality</span></div>
-          <div class="icon-preview col s6 m3"><i class="material-icons dp48">surround_sound</i><span>surround_sound</span></div>
           <div class="icon-preview col s6 m3"><i class="material-icons dp48">info</i><span>info</span></div>
           <div class="icon-preview col s6 m3"><i class="material-icons dp48">https</i><span>https</span></div>
           <div class="icon-preview col s6 m3"><i class="material-icons dp48">aspect_ratio</i><span>aspect_ratio</span></div>
@@ -389,6 +387,7 @@
           <div class="icon-preview col s6 m3"><i class="material-icons dp48">assignment</i><span>assignment</span></div>
           <div class="icon-preview col s6 m3"><i class="material-icons dp48">assignment_ind</i><span>assignment_ind</span></div>
           <div class="icon-preview col s6 m3"><i class="material-icons dp48">assignment_late</i><span>assignment_late</span></div>
+          <div class="icon-preview col s6 m3"><i class="material-icons dp48">mode_edit</i><span>mode_edit</span></div>
 
 
           </div>
@@ -414,7 +413,6 @@
 
   </div>
 </div>
-
 
     </main>    <footer class="page-footer">
       <div class="container">
@@ -448,17 +446,20 @@
       </div>
       <div class="footer-copyright">
         <div class="container">
-        © 2014-2015 Materialize, All rights reserved.
+        © 2014-2016 Materialize, All rights reserved.
         <a class="grey-text text-lighten-4 right" href="https://github.com/Dogfalo/materialize/blob/master/LICENSE">MIT License</a>
         </div>
       </div>
     </footer>
+
     <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script>if (!window.jQuery) { document.write('<script src="bin/jquery-2.1.1.min.js"><\/script>'); }
     </script>
-    <script src="js/jquery.timeago.min.js"></script>  
+    <script src="js/jquery.timeago.min.js"></script>
     <script src="js/prism.js"></script>
+    <script src="jade/lunr.min.js"></script>
+    <script src="jade/search.js"></script>
     <script src="bin/materialize.js"></script>
     <script src="js/init.js"></script>
     <!-- Twitter Button -->
@@ -478,5 +479,6 @@
     ga('require', 'displayfeatures');
     ga('send', 'pageview');
     </script>
+
   </body>
 </html>

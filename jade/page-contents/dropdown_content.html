@@ -62,6 +62,14 @@
               <td>beloworigin</td>
               <td>If true, the dropdown will show below the activator. Default: false</td>
             </tr>
+            <tr>
+              <td>alignment</td>
+              <td>Defines the edge the menu is aligned to. Default: 'left'</td>
+            </tr>
+            <tr>
+              <td>stoppropagation</td>
+              <td>If true, stops the event propagating from the dropdown origin click handler. Default: false</td>
+            </tr>
           </tbody>
         </table>
         <p>To use these inline you have to add them as data attributes. If you want more dynamic control, you can define them using the jQuery plugin below. </p>
@@ -82,9 +90,26 @@
       constrain_width: false, // Does not change width of dropdown to that of the activator
       hover: true, // Activate on hover
       gutter: 0, // Spacing from edge
-      belowOrigin: false // Displays dropdown below the button
+      belowOrigin: false, // Displays dropdown below the button
+      alignment: 'left' // Displays dropdown with edge aligned to the left of button
     }
   );
+        </code></pre>
+
+        <p>
+        You can also open dropdowns programatically, the below code will make your modal open on document ready:
+        </p>
+
+        <pre><code class="language-javascript">
+  $('.dropdown-button').dropdown('open');
+        </code></pre>
+
+        <p>
+        You can also close dropdowns programatically:
+        </p>
+
+        <pre><code class="language-javascript">
+  $('.dropdown-button').dropdown('close');
         </code></pre>
       </div>
 
@@ -110,4 +135,3 @@
 
   </div>
 </div>
-
